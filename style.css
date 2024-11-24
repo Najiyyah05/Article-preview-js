@@ -1,0 +1,159 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.4;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  /*text-wrap: balance;*/
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+:root{
+    --clr-header: hsl(217, 19%, 35%);
+    --clr-paragraph: hsl(214, 17%, 51%);
+    --bg-body: hsl(212, 23%, 69%);
+    --bg-main: hsl(210, 46%, 95%);
+    --ff-text: Manrope;
+    --fs-header: 1.1rem;
+    --fs-paragraph: 0.8rem;
+    --fs-attribute: 0.6rem;
+}
+@font-face {
+    font-family: Manrope;
+    src: url(Manrope-VariableFont_wght.ttf);
+}
+body{
+    display: grid;
+    place-content: center;
+    background-color: var(--bg-body);
+}
+main{
+    max-width: 20.8rem;
+    font-family: var(--ff-text);
+    background-color: var(--bg-main);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.landing_page-image{
+    max-height: 240px;
+    overflow: hidden;
+}
+.landing_page-text{
+    margin: 1.5rem;
+}
+.landing_page-text h3{
+    color: var(--clr-header);
+    font-size: var(--fs-header);
+
+}
+.landing_page-text p{
+    font-size: var(--fs-paragraph);
+    color: var(--clr-paragraph);
+    font-weight: 500;
+}
+.attribution{
+    font-size: var(--fs-attribute);
+    padding-top: 2rem;
+} 
+.about_and_share{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 0 1rem 1rem 1rem;
+    font-size: var(--fs-paragraph);
+}
+.about_and_share .image{ 
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.about_and_share .name_and_date ol{
+    text-decoration: none;
+    padding: 0;
+}
+.name_and_date .name{
+    color: var(--clr-header);
+    font-weight: bold;
+}
+.name_and_date .date{
+    color: var(--clr-paragraph);
+}
+.about_and_share .name_and_date ul{
+    padding: 0;
+    margin: 0;
+}
+.about_and_share .share_button{
+    background-color: var(--bg-body);
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
